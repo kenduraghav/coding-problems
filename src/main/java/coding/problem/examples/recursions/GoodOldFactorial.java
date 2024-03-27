@@ -9,6 +9,7 @@ public class GoodOldFactorial {
 		System.out.println("Enter the number to find the factorial");
 		int n = sc.nextInt();
 		System.out.println("Factorial of %d is ->  " + factorialOfN(n));
+		sc.close();
 	}
 	
 	static int factorialOfN(int n) {
