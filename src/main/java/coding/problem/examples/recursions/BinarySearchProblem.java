@@ -30,9 +30,13 @@ public class BinarySearchProblem {
 		}
 		
 		if(bookIds[mid] > searchId) {
-			return binarySearchForBook(bookIds, start, mid-1, searchId); // search thru left half; end should mid-1 for left search
+			return binarySearchForBook(bookIds, start, mid-1, searchId); 
+			// search thru left half; 
+			//end should mid-1 for left search
 		} else {
-			return binarySearchForBook(bookIds, mid + 1, end, searchId); //search thru right half; start should mid + 1 for right search;
+			return binarySearchForBook(bookIds, mid + 1, end, searchId); 
+			//search thru right half; 
+			//start should mid + 1 for right search;
 		}		
 	}
 
