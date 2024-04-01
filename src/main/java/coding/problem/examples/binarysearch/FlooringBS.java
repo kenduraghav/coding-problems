@@ -4,7 +4,7 @@ public class FlooringBS {
 
 	public static void main(String[] args) {
 		int[] arr = { 2, 3, 4, 8, 10, 12, 24, 45, 48 };
-		int target = 25;
+		int target = 5;
 		System.out.println("Index to be inserted: " + flooringBS(arr, target));
 	}
 

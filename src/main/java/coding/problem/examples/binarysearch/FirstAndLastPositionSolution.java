@@ -14,11 +14,6 @@ public class FirstAndLastPositionSolution {
 		int range[] = searchRange(arr, target);
 		System.out.println("" + Arrays.toString(range));
 		
-//		int [] arr  = {0,1,4,3,2,5};
-//		int target = 1;		
-//		Arrays.sort(arr);
-//		int index = search(arr,target,true);
-//		System.out.println("First Index value:" + arr[index]);
 	}
 
 	// returns the index.

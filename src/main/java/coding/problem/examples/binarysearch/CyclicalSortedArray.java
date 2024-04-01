@@ -11,6 +11,9 @@ public class CyclicalSortedArray {
 
 		int[] nums3 = new int[] { 6, 5, 4, 3, 2, 1, 7 };
 		System.out.println(findMax(nums3)); // Output: 7
+		
+		int[] nums4 = new int[] { 4,5,6,7,0,1,2 };
+		System.out.println(findMax(nums4)); // Output: 7
 	}
 
 	static int findMax(int arr[]) {
