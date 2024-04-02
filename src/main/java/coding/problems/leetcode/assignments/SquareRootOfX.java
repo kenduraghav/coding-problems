@@ -11,13 +11,15 @@ public class SquareRootOfX {
 		System.out.println(mySqrt(9));
 		System.out.println(mySqrt(2147395599));
 		System.out.println(mySqrt(3));
+		System.out.println(mySqrt(808201));
 		
-		System.out.println("=========Newton's Method============");
-		System.out.println(newtonSqrt(16));
-		System.out.println(newtonSqrt(4));
-		System.out.println(newtonSqrt(9));
-		System.out.println(newtonSqrt(2147395599));
-		System.out.println(newtonSqrt(3));
+		
+//		System.out.println("=========Newton's Method============");
+//		System.out.println(newtonSqrt(16));
+//		System.out.println(newtonSqrt(4));
+//		System.out.println(newtonSqrt(9));
+//		System.out.println(newtonSqrt(2147395599));
+//		System.out.println(newtonSqrt(3));
 	}
 
 	static int newtonSqrt(int x) {
@@ -35,7 +37,7 @@ public class SquareRootOfX {
 		}
 
 		long start = 1;
-		long end = x;
+		long end = x / 2;
 		int ans = 0;
 		while (start <= end) {
 
