@@ -5,8 +5,10 @@ public class OrderAgnosticBinarySearch {
 	public static void main(String[] args) {
 
 //		int [] arr = {2,3,4,8,10,12,24,45,48};
-		int[] arr = { 78, 45, 35, 20, 15, 8, 5, 2, -1, -5, -8, -10 };
-		int target = 45;
+//		int[] arr = { 78, 45, 35, 20, 15, 8, 5, 2, -1, -5, -8, -10 };
+		
+		int[] arr = { 2,1};
+		int target = 1;
 		System.out.println("Index is: " + orderAgnosticBS(arr, target));
 	}
 
