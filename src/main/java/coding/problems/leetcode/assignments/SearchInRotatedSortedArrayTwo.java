@@ -9,7 +9,7 @@ public class SearchInRotatedSortedArrayTwo {
 		System.out.println(search(case1,0));
 		
 		
-		int [] case2= {1};
+		int [] case2= {6,5,0,6,1,2,6};
 		System.out.println(search(case2,1));
 	}
 	
