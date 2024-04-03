@@ -1,7 +1,9 @@
 package coding.problems.leetcode.assignments;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 //https://leetcode.com/problems/intersection-of-two-arrays/
@@ -9,9 +11,9 @@ public class Intersection {
 
 	public static void main(String[] args) {
 
-		int num1[] = { 4,9,5,4 };
-		int num2[] = { 9,4,9,8,4 };
-		int[] intersects = intersection(num1, num2);
+		int num1[] = {1,2,2,1 };
+		int num2[] = {2,2};
+		int[] intersects = intersection2(num1, num2);
 		System.out.println(Arrays.toString(intersects));
 	}
 
@@ -41,5 +43,13 @@ public class Intersection {
 
 		return ans;
 	}
-
+	
+	
+	static int[] intersection2(int[] nums1, int[] nums2) {
+		
+		Arrays.sort(nums1);
+		Arrays.sort(nums2);
+		return new int[]{-1,-1};
+	}
+		
 }
