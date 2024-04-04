@@ -1,4 +1,4 @@
-package coding.problem.examples.basics;
+package coding.problem.examples.arrays;
 
 import java.util.Arrays;
 

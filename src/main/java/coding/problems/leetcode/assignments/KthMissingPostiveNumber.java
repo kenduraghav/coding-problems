@@ -1,7 +1,5 @@
 package coding.problems.leetcode.assignments;
 
-import java.util.Arrays;
-
 public class KthMissingPostiveNumber {
 
 	public static void main(String[] args) {
