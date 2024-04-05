@@ -17,22 +17,26 @@ public class RichestCustomer {
 	}
 
 	static int maximumWealth(int[][] accounts) {
-		int n = accounts.length;
-		int[] result = new int[n]; // create a temp array with length of rows in 2D array.
+		int[] result = new int[accounts.length]; 
+		// create a temp array with length of rows in 2D array.
+		int max = 0;
 		for (int row = 0; row < accounts.length; row++) {
 			int sum = 0;
 			// calculate the wealth of each customer.
 			for (int col = 0; col < accounts[row].length; col++) {
 				sum += accounts[row][col];
 			}
-			result[row] = sum; // update the temp array with wealth of each customer.
-		}
-		int max = 0;
-		for (int i = 0; i < result.length; i++) {
-			if (result[i] > max) { // apply linear search to calculate the richest customer.
-				max = result[i];
+			//result[row] = sum; // update the temp array with wealth of each customer.
+			if(sum > max) {
+				max= sum;
 			}
 		}
+		
+//		for (int i = 0; i < result.length; i++) {
+//			if (result[i] > max) { // apply linear search to calculate the richest customer.
+//				max = result[i];
+//			}
+//		}
 		return max;
 	}
 

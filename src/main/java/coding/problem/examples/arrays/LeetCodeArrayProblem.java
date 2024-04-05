@@ -1,24 +1,34 @@
 package coding.problem.examples.arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class LeetCodeArrayProblem {
 
 	public static void main(String[] args) {
 		int[] nums = { 0, 2, 1, 5, 3, 4 };
 		int[] ans = buildArray(nums);
-		System.out.println(Arrays.toString(ans));
+		System.out.println("Build Array :" + Arrays.toString(ans));
 
 		int[] ans1 = getConcatenation(ans);
-		System.out.println(Arrays.toString(ans1));
+		System.out.println("Array Concatenation :" +Arrays.toString(ans1));
 
 		var nums2 = new int[] { 1, 2, 3, 4 };
 		int[] ans2 = runningSum(nums2);
-		System.out.println(Arrays.toString(ans2));
+		System.out.println("Running Sum :" +Arrays.toString(ans2));
 
 		var nums3 = new int[] { 2, 5, 1, 3, 4, 7 };
 		int[] ans3 = shuffleArray(nums3, 3);
-		System.out.println(Arrays.toString(ans3));
+		System.out.println("Shuffle Array :" +Arrays.toString(ans3));
+		
+		var nums4 = new int[] { 4,2,1,1,2 };		
+		var nums5 = new int[] { 12,1,12 };		
+		var nums6 = new int[] { 2,3,5,1,3 };
+		System.out.println("Kids with Candies : " +kidsWithCandies(nums6, 3));
+		
+		var nums7 = new int[] {1,2,3,1,1,3};		
+		System.out.println("No of Identical Pairs : " +numIdenticalPairs(nums7));
 	}
 
 	// https://leetcode.com/problems/build-array-from-permutation/
@@ -66,5 +76,36 @@ public class LeetCodeArrayProblem {
 		}
 		return result;
 	}
+	
+	//https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+	static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+
+		int maxCandies = 0;
+        for (int candy : candies) {
+            maxCandies = Math.max(maxCandies, candy); // Find the maximum number of candies
+        }
+
+        List<Boolean> result = new ArrayList<>();
+        for (int candy : candies) {
+            result.add(candy + extraCandies >= maxCandies); // Check if each kid has the greatest number of candies
+        }
+
+        return result;
+	}
+	
+	//https://leetcode.com/problems/number-of-good-pairs/
+	 static int numIdenticalPairs(int[] nums) {       
+	        
+
+	        int count = 0;
+	        for(int i=0; i < nums.length; i++){
+	            for(int j=1; j < nums.length; j++){
+	                if(nums[i] == nums[j] && i < j){
+	                    count++;
+	                }
+	            }
+	        }
+	        return count;
+	    }
 
 }
