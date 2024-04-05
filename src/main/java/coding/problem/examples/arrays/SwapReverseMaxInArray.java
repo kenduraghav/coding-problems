@@ -6,11 +6,11 @@ public class SwapReverseMaxInArray {
 
 	public static void main(String[] args) {
 		
-		int arr[] = {1,3,4,6,7,0};
-		int index1 = 2, index2= 5;
-		swap(arr, index1, index2);
+		int arr[] = {-100,1,3,-1,4,6,7,0};
+		swap(arr, 2, 5);
 		System.out.println("Swapping array:" +Arrays.toString(arr));
 		System.out.println("Maximum array: " + max(arr));
+		System.out.println("Mininum in array: " + min(arr));
 		reverse(arr);
 		System.out.println("Reversing Array:" +Arrays.toString(arr));
 	}
@@ -29,6 +29,16 @@ public class SwapReverseMaxInArray {
 			}
 		}
 		return max;
+	}
+	
+	private static int min(int[] arr) {
+		int min = arr[0];
+		for(int i= 1; i < arr.length; i++) {
+			if(arr[i] < min) {
+				min=arr[i];
+			}
+		}
+		return min;
 	}
 	
 	
