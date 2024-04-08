@@ -2,7 +2,9 @@ package coding.problem.examples.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class LeetCodeArrayProblem {
 
@@ -34,6 +36,10 @@ public class LeetCodeArrayProblem {
 		var index = new int[] { 0, 1, 2, 2, 1 };
 		int[] targetArray = createTargetArray(nums8, index);
 		System.out.println("Target  Array : " + Arrays.toString(targetArray));
+
+		System.out.println(checkIfPangram("thequickbrownfoxjumpsoverthelazydog"));
+		System.out.println(checkIfPangram("leetcode"));	
+		
 	}
 
 	// https://leetcode.com/problems/build-array-from-permutation/
@@ -126,7 +132,18 @@ public class LeetCodeArrayProblem {
 				}
 			}
 		}
+
 		return count;
+	}
+
+	//https://leetcode.com/problems/check-if-the-sentence-is-pangram/
+	static boolean checkIfPangram(String sentence) {
+		Set<Character> charSet = new HashSet<>();
+		for (char c : sentence.toCharArray()) {
+			if (!charSet.contains(c))
+				charSet.add(c); // set dont have putIfAbsent.. it is only for hashmap
+		}
+		return 26 == charSet.size();
 	}
 
 	// https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
@@ -142,6 +159,27 @@ public class LeetCodeArrayProblem {
 			countArr[i] = count;
 		}
 		return countArr;
+	}
+
+	//https://leetcode.com/problems/count-items-matching-a-rule/
+	static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+
+		int count = 0;
+        int index = 0;
+        for (List<String> itemList : items) {            
+            String itemType = itemList.get(index);
+            String itemColor = itemList.get(index+1);
+            String itemName = itemList.get(itemList.size()-1);
+            
+            if(itemType.equals(ruleValue) && ruleKey.equals("type")){
+                count++;
+            }else if(itemColor.equals(ruleValue) && ruleKey.equals("color")){
+                count++;
+            }else if(itemName.equals(ruleValue) && ruleKey.equals("name")){
+                count++;
+            }            
+        }
+        return count;
 	}
 
 }

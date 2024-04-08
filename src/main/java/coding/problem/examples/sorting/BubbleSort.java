@@ -6,11 +6,11 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 		
-		int [] arr = {7,5,9,12,3};	
+		int [] arr = {-9,10,32,-5,1,10,15,20,8,5,3,2,4,16,11};	
 		
 		int n = arr.length;
 		
-		System.out.println("Before Sorting: " + Arrays.toString(arr));
+		System.out.println("Before Sorting	:" + Arrays.toString(arr));
 		
 		for(int i = 0; i < n-1; i++) {//outer loop controls the no. of runs for inner loop and outer loop must run n-1 times. 
 			boolean isSwapped = false;
@@ -27,7 +27,7 @@ public class BubbleSort {
 			}
 		}
 		
-		System.out.println("After Sorting: " + Arrays.toString(arr));
+		System.out.println("After Sorting	:" + Arrays.toString(arr));
 	}
 
 }
