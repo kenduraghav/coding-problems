@@ -15,30 +15,30 @@ public class MergeSortExampe {
 	}
 
 	static void merge(int[] arr, int left, int mid, int right) {
-		int n1 = mid - left + 1;
-		int n2 = right - mid;
-		int[] leftPart = new int[n1];
-		int[] rightPart = new int[n2];
+		int n1 = mid - left + 1; // initializing the length of left array.
+		int n2 = right - mid; // initializing the length of right array.
+		int[] leftPart = new int[n1]; // left temp array
+		int[] rightPart = new int[n2]; // right temp array.
 
 		for (int i = 0; i < n1; ++i)
-			leftPart[i] = arr[left + i];
+			leftPart[i] = arr[left + i]; // filling the left temp array
 		for (int j = 0; j < n2; ++j)
-			rightPart[j] = arr[mid + 1 + j];
+			rightPart[j] = arr[mid + 1 + j]; // filling the right temp array.
 
-		int i = 0, j = 0;
-		int k = left;
+		int i = 0, j = 0; // counter variables used to left and right array.
+		int k = left; //k -> is the point where starts from 0;
 		while (i < n1 && j < n2) {
-			if (leftPart[i] <= rightPart[j]) {
-				arr[k] = leftPart[i];
-				i++;
+			if (leftPart[i] <= rightPart[j]) { // if leftPart is < than rightPart
+				arr[k] = leftPart[i]; // update the array part with left value.
+				i++; // increment the counter for left
 			} else {
-				arr[k] = rightPart[j];
+				arr[k] = rightPart[j]; // else update the array with right part element and increment the counter for right
 				j++;
 			}
-			k++;
+			k++; // increment the counter for main array. repeat this untils loop ends.
 		}
 
-		while (i < n1) {
+		while (i < n1) { // insert the pivot element in array.
 			arr[k] = leftPart[i];
 			i++;
 			k++;
