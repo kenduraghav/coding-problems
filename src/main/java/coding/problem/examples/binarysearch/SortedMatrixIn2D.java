@@ -11,7 +11,33 @@ public class SortedMatrixIn2D {
 	                {7, 8, 9}
 	        };
 		 	
-	        System.out.println(Arrays.toString(search(arr, 8)));
+	        System.out.println(Arrays.toString(searchInMatrix(arr, 8)));
+	}
+	
+	private static int[] searchInMatrix (int [][] matrix, int target) {
+		System.out.println("from copilot");
+		 int rows = matrix.length;
+	        int cols = matrix[0].length;
+
+	        // Start from the top-right corner
+	        int row = 0;
+	        int col = cols - 1;
+
+	        while (row < rows && col >= 0) {
+	            if (matrix[row][col] == target) {
+	                // Found the target, return the indices
+	                return new int[]{row, col};
+	            } else if (matrix[row][col] < target) {
+	                // Move down (since the current element is smaller than the target)
+	                row++;
+	            } else {
+	                // Move left (since the current element is greater than the target)
+	                col--;
+	            }
+	        }
+
+	        // Target not found, return an array with -1 indices
+	        return new int[]{-1, -1};
 	}
 	
 	private static int[] search(int [][] matrix, int target) {

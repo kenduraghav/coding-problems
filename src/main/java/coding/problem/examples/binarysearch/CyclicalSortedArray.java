@@ -29,7 +29,7 @@ public class CyclicalSortedArray {
 				low = mid + 1;
 			}
 		}
-		System.out.println(low + " " + high);
+		System.out.println(low+ " " + high + (low == high));
 		return arr[low];
 	}
 	

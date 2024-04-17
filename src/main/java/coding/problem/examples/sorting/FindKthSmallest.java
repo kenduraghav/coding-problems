@@ -18,21 +18,23 @@ public class FindKthSmallest {
 		return kthSmallest(numbers, 0, numbers.length - 1, k);
 
 	}
-
+	
+	
+	//1. Find the pivot element partition using quick sort.
 	static int kthSmallest(int[] arr, int start, int end, int k) {
 
 		if (k > 0 && k <= end - start + 1) {
-			int pos = partition(arr, start, end);
+			int pos = partition(arr, start, end); // partition the array and find the pivot element
 
 			if (pos - start == k - 1) {
-				return arr[pos];
+				return arr[pos]; // if pivot is equal to kth position. return the pos
 			}
 
-			if (pos - start > k - 1) {
+			if (pos - start > k - 1) { // if k is smaller than the position.. search thru left half
 				return kthSmallest(arr, start, pos - 1, k);
 			}
 
-			return kthSmallest(arr, pos + 1, end, k - pos + start - 1);
+			return kthSmallest(arr, pos + 1, end, k - pos + start - 1); //else search thru right half.
 		}
 
 		return Integer.MAX_VALUE;

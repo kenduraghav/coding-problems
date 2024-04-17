@@ -15,13 +15,15 @@ public class InfiniteSearchArray {
 	}		
 	
 	static int findTarget(int [] arr, int target) {
-		
+		// first find the range
+        // first start with a box of size 2
 		int start = 0;
 		int end = 1;
 		
 		while(target > arr[end]) {
-			int temp = end + 1;
-			
+			int temp = end + 1;  // this is my new start
+			// double the box value
+            // end = previous end + sizeofbox*2
 			end = end + (end-start+1) * 2;
 			
 			start = temp;

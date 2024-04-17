@@ -7,7 +7,7 @@ public class RecursionBasic {
 	}
 	
 	static void recursiveBasic(int x) {
-		if(x < 0) {
+		if(x < 0) {//base case
 			System.out.println("Function End");
 		} else {
 			System.out.println("X: " + x);

@@ -91,8 +91,9 @@ public class PatternProblem {
 //		pattern3(5);
 //		System.out.println("-----------Pattern4---------------");
 //		pattern4(5);
-//		System.out.println("-----------Pattern5---------------");
+		System.out.println("-----------Pattern5---------------");
 //		pattern5(5);
+		pattern28(5);
 //		System.out.println("-----------Pattern6---------------");
 //		pattern6(5);
 //		System.out.println("-----------Pattern7---------------");
@@ -105,8 +106,8 @@ public class PatternProblem {
 //		pattern10(5);
 //		System.out.println("-----------Pattern11---------------");
 //		pattern11(5);
-		System.out.println("-----------Pattern11---------------");
-		pattern12(5);
+//		System.out.println("-----------Pattern12---------------");
+//		pattern12(5);
 	}
 
 	// if n=4;
