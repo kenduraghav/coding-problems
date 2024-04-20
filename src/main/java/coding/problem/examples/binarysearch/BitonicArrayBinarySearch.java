@@ -58,20 +58,27 @@ public class BitonicArrayBinarySearch {
 			int mid = low + (high - low) / 2;
 			if (arr[mid] == x) {
 				return mid;
-			} else if (ascending) {
-				if (arr[mid] < x) {
-					low = mid + 1;
-				} else {
-					high = mid - 1;
-				}
+			} 
+			
+			if (ascending ? arr[mid] < x : arr[mid] > x) {
+				low = mid + 1;
 			} else {
-				// TODO: implement the descending binary search logic
-				if (arr[mid] > x) {
-					high = mid - 1;
-				} else {
-					low = mid + 1;
-				}
+				high  = mid-1;
 			}
+//			} else if (ascending) {
+//				if (arr[mid] < x) {
+//					low = mid + 1;
+//				} else {
+//					high = mid - 1;
+//				}
+//			} else {
+//				// TODO: implement the descending binary search logic
+//				if (arr[mid] > x) {
+//					high = mid - 1;
+//				} else {
+//					low = mid + 1;
+//				}
+//			}
 		}
 		return -1;
 	}

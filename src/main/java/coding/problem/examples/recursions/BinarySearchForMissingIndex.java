@@ -6,7 +6,7 @@ public class BinarySearchForMissingIndex {
 
 //		int[] bookIDs = {101, 203, 307, 404, 513, 628, 734, 850, 961 };
 		int[] bookIDs = {2, 3, 5, 9, 14, 15, 17, 18, 19 };
-		int searchID = 16;
+		int searchID = 13;
 		int bookIndex = binarySearchForBook(bookIDs, 0, bookIDs.length - 1, searchID);
 		if (bookIndex != -1)
 			System.out.println("Book with ID " + searchID + " is to be inserted at index: " + bookIndex);
