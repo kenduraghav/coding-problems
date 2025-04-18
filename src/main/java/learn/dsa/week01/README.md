@@ -35,5 +35,35 @@
 ---
 
 
-## Week 1 - Day 2: More Array Problems (Coming Soon)
+## Week 1 - Day 2: More Array Problems
+
+### Topics Covered
+- Reinforced concepts from Day 1
+- Practiced more problems on removeDuplicates, moveZeroes,
+- Attempted LeetCode problems using Day 1 logic
+
+### Key Learnings
+- **Reinforcement Helps**: Going back to basics made the concepts stronger.
+- **Clarity Through Practice**: Code clarity improved when edge cases were handled properly.
+- **Struggled with Simpler Problems**: Realized that logic can break under pressure, but it's okay.
+
+### Challenges
+- Couldn't solve two problems on my own.
+- Felt distracted and overwhelmed during practice.
+
+### Next Steps
+- Solve 1–2 simple array problems later in the day to regain momentum.
+- Prepare for Day 3 by brushing up **binary search** and **rotate array** problems.
+- Focus on steady progress.
+
+### Time Spent
+- 1 hour practice
+- 30 min reflecting and debugging
+
+### Resources Used
+- LeetCode
+- Internal utility methods from Day 1
+- Reflection notes
+
+---
 

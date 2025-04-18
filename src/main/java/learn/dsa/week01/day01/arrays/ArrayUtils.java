@@ -12,14 +12,11 @@ public class ArrayUtils {
 		int right = arr.length -1;
 		
 		while(left < right) {
-			int temp = arr[right];
-			arr[right] = arr[left];
-			arr[left] = temp;
+			swap(arr, left, right);
 			left++;
 			right--;
 		}
 	}
-	
 	
 	public int findMax(int [] arr) {
 		if(arr == null || arr.length == 0) throw new IllegalArgumentException("Array is null or empty");
@@ -52,5 +49,48 @@ public class ArrayUtils {
 			sum += arr[i];
 		}
 		return sum;
+	}
+	
+	
+	public void moveZeros(int [] arr) {
+		if(arr == null || arr.length <= 1) return;
+		
+		if(arr.length == 1) 
+			return;
+		
+		
+		int insertPosition = 0;
+		for(int num: arr) {
+			if(num != 0) {
+				arr[insertPosition++] = num;
+			}
+		}
+		
+		while(insertPosition < arr.length) {
+			arr[insertPosition++] = 0;
+		}
+	}
+	
+	public int removeDuplicates(int [] arr) {
+		if(arr == null || arr.length < 1) { return 0; }
+		
+		if(arr.length == 1) { return arr.length;}
+		
+		int i = 0;  // slow pointer - where the next unique value goes
+
+	    for (int j = 1; j < arr.length; j++) {
+	        if (arr[j] != arr[i]) {
+	            i++;
+	            arr[i] = arr[j]; // overwrite duplicate
+	        }
+	    }
+
+	    return i + 1; // new length = index + 1
+	}
+
+	private void swap(int[] arr, int left, int right) {
+		int temp = arr[right];
+		arr[right] = arr[left];
+		arr[left] = temp;
 	}
 }
